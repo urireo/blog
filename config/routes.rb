@@ -1,5 +1,28 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :pages
+ 
+ # THE FOLLOWING ARE EQUIVALENT TO the line above  .....resources :pages
+  #get '/pages/new', to: 'pages#new', as: 'new_page'  #by convention you name the path after that resource pluralized
+  #get'/pages/:id', to: 'pages#show', as:'page' 
+  #post '/pages', to: 'pages#create'
+  #get '/pages/:id/edit', to: 'pages#edit', as: 'edit_page' #this will create an edit page link
+ # patch'/pages/:id', to: 'pages#update'
+ # delete '/pages/:id', to: 'pages#destroy'
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

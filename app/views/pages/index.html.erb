@@ -1,0 +1,25 @@
+<h1> Blog Pages</h1>
+
+
+
+<% @pages.each do |page| %>
+    <%# = link_to page.title, "/pages/#{page.id}"  %> 
+    <%#= link_to page.title, pages_path(page) %>
+    <p><%= link_to page.title, page %></p>
+<% end %>
+<br>
+<%= link_to 'New Page', new_page_path %> 
+<!--# this will show a link with text 'New Page' in index and take you to the Page controller new method
+
+
+
+<%# one way to do this is as follow%>
+<%# @pages.each do |page| %>
+  <p>
+    <%#= page.title %>
+    <p><%#= link_to page.title, "/pages/#{page.id}"%></p>
+  </p>
+<%# end %>
+<%#= @pages.first.title %>
+
+<!--  we can do her a form to get data and do form action ='/students' 
