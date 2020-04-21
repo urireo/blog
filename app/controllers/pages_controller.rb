@@ -2,6 +2,7 @@ class PagesController < ApplicationController
     #before_action :set_page, except: [:index, :new, :create]
     #or even better, so that whenever you add a method you dont need it, you dont have to worry about adding to the list above:
     before_action :set_page, only: [:show, :edit, :update, :destroy]
+    
     def index
        @pages = Page.all
     end
