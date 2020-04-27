@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+<% if @post.comments.present? %>
+  <div id="comments">
+  <h1>Comments</h1>
+<% end %>
+  <!-- The `comments` method returns an array-like collection, so we can call `each` on it: -->
+<%= render @post.comments %>
+
+<h2> Add a Comment </h2>
+
+<%= render :partial => "comments/form", locals: {comment: @post.comments.new} %>
+<h2> Add another Comment </h2>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
