@@ -27,7 +27,7 @@ class CostumersController < ApplicationController
   def create
     @costumer = Costumer.new(costumer_params)
     if @costumer.save #if this returns not nill values, then it is success
-      flash.notice = "The customer record was created duccessfully."
+      flash.notice = "The record was created duccessfully."
       redirect_to @costumer
     else
       flash.now.alert = @costumer.errors.full_messages.to_sentence
@@ -51,7 +51,7 @@ class CostumersController < ApplicationController
   # PATCH/PUT /costumers/1.json
   def update
     if @costumer.update(costumer_params) #if this returns not nill values, then it is success
-      flash.notice = "The customer record was created successfully."
+      flash.notice = "The costumer record was created successfully."
       redirect_to @costumer
     else
       flash.now.alert =@costumer.errors.full_messages.to_sentence
