@@ -1,0 +1,23 @@
+<h1> show an order </h1>
+  <div class="field">
+    <strong>Product name:</strong>
+    <%= @order.product_name %>
+  </div>
+
+<div class="field">
+  <strong>Count:</strong>
+  <%= @order.product_count %>
+</div>
+
+
+<div class="field">
+  <strong>Customer:</strong>
+  <%= @order.costumer.full_name %>
+
+</div>
+
+
+<%#= link_to 'See Customer orders', show_costumers_path(@order.costumer_id) %>
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
+<%#= render :partial => "costumers/form", locals: {order: @order.costumer_id} %>

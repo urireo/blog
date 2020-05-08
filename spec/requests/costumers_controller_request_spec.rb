@@ -87,7 +87,7 @@ RSpec.describe "CostumersControllers", type: :request do
     it "deletes a costumer record" do
       costumer = FactoryBot.create(:costumer)
       #delete costumer_path(id: costumer.id) #delete is  the operation for destroy. The route for destroy includes the costumer.id
-      expect { delete costumer_path(costumer.id) }.to change {Costumer.count}.from(1).to(0)
+      expect { delete costumer_path(costumer.id) }.to change {Costumer.count}.by(-1)
       #expect(costumer).to eq nil
       #expect {Costumer, :count}.to_not change
       #we don't expect a redirect, and therefore the HTTP status should be 200
